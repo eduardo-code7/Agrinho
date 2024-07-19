@@ -99,52 +99,70 @@
 
             }
         }
-
         .textp {
-            background: url('img/home2.jpg') no-repeat center center;
-            background-size: cover;
-            height: 400px;
-        }
+    background: url('img/home2.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-2);
+    text-shadow: 2px 2px 4px var(--cor-7);
+}
 
-        .textp h1 {
-            text-align: center;
-            font-size: 3.2em;
-            padding-top: 70px;
-            font-weight: 800;
-            text-align: center;
-            color: var(--cor-2);
-            text-shadow: 2px 2px 4px var(--cor-7);
-
-        }
-
-        .textp img, .text2 img {
-            display: block;
-            margin: 20px auto;
-            width: 50%;
-        }
-
-        .textp p {
-            text-align: center;
-            color: var(--cor-2);
-            font-size: 1.4em;
-            font-weight: 800;
-            text-shadow: 2px 2px 4px var(--cor-7);
-
-        }
-  .text2 h1 {
+.textp h1 {
     text-align: center;
+    font-size: 3.2em;
+    padding-top: 70px;
+    font-weight: 800;
+}
+
+.textp img, .text2 img {
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.textp p {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 800;
+}
+
+.text2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.text2 h1 {
     color: var(--cor-9);
-   font-size: 2em;
-   font-weight: bold;
-   margin-top: 20px;
-  }
-  .text2 p{
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.text2 p {
     color: var(--cor-8);
-   text-align: center;
     font-size: 1.3em;
+}
 
+.imagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
 
-  }
+.imagens img {
+    background-size: contain;
+    width: calc(33.333% - 20px);
+    max-width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
     </style>
 </head>
 
@@ -188,12 +206,19 @@
                 <P>Um café para cada momento do seu dia, feito com paixão e cuidado</P>
             </div>
             <div class="imagens">
-                 
+                 <img src="img/brownie.jpg" alt="brownie">
+                 <img src="img/cafe-gelado.jpg" alt="cafe-gelado">
+                 <img src="img/cafe.jpg" alt="cafe">
+                 <img src="img/drink-limão.jpg" alt="drink-limão">
+                 <img src="img/sanduíche.jpg" alt="sanduíche">
+                 <img src="img/suco-maracuja.jpg" alt="suco-maracuja">
+                 <img src="img/suco-verde.jpg" alt="suco-verde">
+                 <img src="img/sanduiché2.jpg" alt="sanduíche">
             </div>
         </article>
 
     </section>
-
+         
     <script>
         var header = document.getElementById('header')
         var nagivation_header = document.getElementById('nagivation_header')
