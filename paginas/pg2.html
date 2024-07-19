@@ -34,53 +34,50 @@
             overflow-y: visible;
         }
 
-        .img-logo {
-            width: 65px;
-            padding-right: 10px;
-        }
+        .img-logo{
+    width: 90px;
+    margin-right: 20px;
+}
+.header, .nagivation_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
 
-        .header,
-        .nagivation_header {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+.header{
+    
+    box-shadow: 1px 1px 4px var(--cor-7);
+    height: 3.4em;
+    justify-content: center;    
+    padding: 0 10%; 
+    height: 10%;  
+    
+}     
+.nagivation_header{
+    gap: 3em;
+    z-index: 2;
+}
+.nagivation_header a{
+    text-decoration: none;
+    color:var(--cor-1);
+    transition: .8s;
+    font-weight:bolder;
+    font-size: 1.2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.nagivation_header a:hover{
+  color: var(--cor-5);
+}
+.btn_icon_header{
+    display: none;
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+   width: 80px;
+   
 
-        }
-
-        .header {
-
-            box-shadow: 1px 1px 4px var(--cor-7);
-            height: 3.4em;
-            justify-content: center;
-            padding: 0 10%;
-
-        }
-
-        .nagivation_header {
-            gap: 3em;
-            z-index: 2;
-        }
-
-        .nagivation_header a {
-            text-decoration: none;
-            color: var(--cor-1);
-            transition: .8s;
-            font-weight: bolder;
-            font-size: 1.2em;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-
-        .nagivation_header a:hover {
-            color: var(--cor-5);
-        }
-
-        .btn_icon_header {
-            display: none;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-            width: 80px;
-        }
+}
 
         @media screen and (max-width: 768px) {
             .btn_icon_header {
@@ -158,7 +155,7 @@
             </span>
         </button>
         <div class="logo_header">
-            <a href="../Index.htm"><img src="img/logo.png" alt="logo" class="img-logo"></a>
+            <a href="../index.html"><img src="img/logo.png" alt="logo" class="img-logo"></a>
         </div>
         <div class="nagivation_header" id="nagivation_header">
             <button class="btn_icon_header" onclick="clicar()">
@@ -166,7 +163,7 @@
                     close
                 </span>
             </button>
-            <a href="..//Index.htm" class="active"> HOME</a>
+            <a href="..//Index.html" class="active"> HOME</a>
             <a href="../paginas/pg1.html"> NOSSA HISTÓRIA </a>
             <a href="pg2.html"> CARDÁPIO</a>
             <a href="#"> TORRA</a>
