@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        :root {
+            --cor-1: #8B4513;
+            --cor-2: #ffffff;
+            --cor-3: #f0f0f0;
+            --cor-4: #5a2a07;
+            --cor-5: #411e05;
+            --cor-6: #006400;
+            --cor-7: #000000;
+            --cor-8:#494949;
+            --cor-9:#313131f6;
+            --fonte: 'Merriweather', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--cor-3);
+            overflow-x: hidden;
+            overflow-y: visible;
+        }
+
+        .img-logo {
+            width: 65px;
+            padding-right: 10px;
+        }
+
+        .header,
+        .nagivation_header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+
+        .header {
+
+            box-shadow: 1px 1px 4px var(--cor-7);
+            height: 3.4em;
+            justify-content: center;
+            padding: 0 10%;
+
+        }
+
+        .nagivation_header {
+            gap: 3em;
+            z-index: 2;
+        }
+
+        .nagivation_header a {
+            text-decoration: none;
+            color: var(--cor-1);
+            transition: .8s;
+            font-weight: bolder;
+            font-size: 1.2em;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .nagivation_header a:hover {
+            color: var(--cor-5);
+        }
+
+        .btn_icon_header {
+            display: none;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            width: 80px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .btn_icon_header {
+                display: block;
+            }
+
+            .nagivation_header {
+                position: absolute;
+                flex-direction: column;
+                top: 0px;
+                background-color: white;
+                height: 100%;
+                width: 35vw;
+                padding: 1em;
+                animation-duration: .5s;
+                margin-left: -1000vw;
+                cursor: pointer;
+
+            }
+        }
+
+        .textp {
+            background: url('img/home2.jpg') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+        }
+
+        .textp h1 {
+            text-align: center;
+            font-size: 3.2em;
+            padding-top: 70px;
+            font-weight: 800;
+            text-align: center;
+            color: var(--cor-2);
+            text-shadow: 2px 2px 4px var(--cor-7);
+
+        }
+
+        .textp img, .text2 img {
+            display: block;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        .textp p {
+            text-align: center;
+            color: var(--cor-2);
+            font-size: 1.4em;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px var(--cor-7);
+
+        }
+  .text2 h1 {
+    text-align: center;
+    color: var(--cor-9);
+   font-size: 2em;
+   font-weight: bold;
+   margin-top: 20px;
+  }
+  .text2 p{
+    color: var(--cor-8);
+   text-align: center;
+    font-size: 1.3em;
+
+
+  }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <button class="btn_icon_header" onclick="clicar()">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+        <div class="logo_header">
+            <a href="../Index.htm"><img src="img/logo.png" alt="logo" class="img-logo"></a>
+        </div>
+        <div class="nagivation_header" id="nagivation_header">
+            <button class="btn_icon_header" onclick="clicar()">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+            <a href="..//Index.htm" class="active"> HOME</a>
+            <a href="../paginas/pg1.html"> NOSSA HISTÓRIA </a>
+            <a href="pg2.html"> CARDÁPIO</a>
+            <a href="#"> TORRA</a>
+            <a href="#"> CONTATO</a>
+        </div>
+    </div>
+    <section id="content">
+        <article>
+            <div class="textp">
+                <h1>
+                    Nosso cardápio de cafeteria</h1>
+                <img src="img/elemento2.png" alt="imagem">
+                <p>O nosso cardápio é recheado com um mix de sabores e experiências surpreendentes. Desde cafés
+                    especiais, preparados com os melhores grãos,bolos caseiros, pães frescos e sanduíches gourmets e
+                    muito mais.</p>
+            </div>
+
+            <div class="text2">
+                <h1>Visite uma unidade para provar cada uma das nossas receitas deliciosas.</h1>
+                <img src="img/elemento.png" alt="">
+                <P>Um café para cada momento do seu dia, feito com paixão e cuidado</P>
+            </div>
+            <div class="imagens">
+                 
+            </div>
+        </article>
+
+    </section>
+
+    <script>
+        var header = document.getElementById('header')
+        var nagivation_header = document.getElementById('nagivation_header')
+        var content = document.getElementById('content')
+        var showSidebar = false
+        function clicar() {
+            showSidebar = !showSidebar
+            console.log(showSidebar)
+            if (showSidebar) {
+                nagivation_header.style.marginLeft = '-65vw'
+                nagivation_header.style.animationName = 'showSidebar'
+                content.style.filter = 'blur(2px)'
+            } else {
+                nagivation_header.style.marginLeft = '-200vw'
+                nagivation_header.style.animationName = ''
+                content.style.filter = ''
+            }
+        }
+        function closee() {
+            if (showSidebar) {
+                clicar();
+
+            }
+        }
+        window.addEventListener('resize', function (event) {
+            if (window.innerWidth > 768 && showSidebar) {
+                clicar()
+            }
+
+        })
+    </script>
+</body>
+
+</html>
