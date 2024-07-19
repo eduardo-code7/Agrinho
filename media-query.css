@@ -10,6 +10,7 @@
         align-items: center;
     }
     #imgp{
+        width: 100%;
        background-position:  center top;
 
     }
