@@ -31,12 +31,10 @@ body {
 .header, .nagivation_header{
     display: flex;
     flex-direction: row;
-    align-items: center;
-   
+    align-items: center;  
 }
 
 .header{
-    
     box-shadow: 1px 1px 4px var(--cor-7);
     height: 3.4em;
     justify-content: center;    
@@ -84,12 +82,14 @@ body {
     font-size: 2em;
     width: 80%;
     margin-top: 30px;
+    
 }
 
 #imgp h1 {
     text-align: center;
     padding-top: 200px;
     font-size: 5em;
+    text-shadow: 2px 2px 4px var(--cor-7);
 }
 
 #icardapio {

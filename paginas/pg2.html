@@ -9,33 +9,31 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <style>
-        :root {
-            --cor-1: #8B4513;
-            --cor-2: #ffffff;
-            --cor-3: #f0f0f0;
-            --cor-4: #5a2a07;
-            --cor-5: #411e05;
-            --cor-6: #006400;
-            --cor-7: #000000;
-            --cor-8:#494949;
-            --cor-9:#313131f6;
-            --fonte: 'Merriweather', serif;
-        }
+  :root {
+         --cor-1: #8B4513;
+         --cor-2: #ffffff;
+         --cor-3: #f0f0f0;
+         --cor-4: #5a2a07;
+         --cor-5: #411e05;
+         --cor-6: #006400;
+         --cor-7: #000000;
+         --cor-8:#494949;
+         --cor-9:#313131f6;
+         --fonte: 'Merriweather', serif;
+  }
+ * {
+      margin: 0;
+      padding: 0;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            width: 100vw;
-            height: 100vh;
-            background-color: var(--cor-3);
-            overflow-x: hidden;
-            overflow-y: visible;
-        }
-
-        .img-logo{
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor-3);
+    overflow-x: hidden;
+    overflow-y: visible;
+ }
+ .img-logo{
     width: 90px;
     margin-right: 20px;
 }
@@ -47,9 +45,8 @@
 }
 
 .header{
-    
+    background-color: var(--cor-2);
     box-shadow: 1px 1px 4px var(--cor-7);
-    height: 3.4em;
     justify-content: center;    
     padding: 0 10%; 
     height: 10%;  
@@ -80,29 +77,45 @@
 
 }
 
-        @media screen and (max-width: 768px) {
-            .btn_icon_header {
+ @media screen and (max-width: 768px) and (min-width:300px) {
+ .btn_icon_header {
                 display: block;
             }
 
-            .nagivation_header {
-                position: absolute;
-                flex-direction: column;
-                top: 0px;
-                background-color: white;
-                height: 100%;
-                width: 35vw;
-                padding: 1em;
-                animation-duration: .5s;
-                margin-left: -1000vw;
-                cursor: pointer;
+.nagivation_header {
+    position: absolute;
+        flex-direction: column;
+        background-color: white;
+        top: 0px;
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        padding-left: 20px;
+        animation-duration: .5s;
+        margin-left: -1000vw;
+        cursor: pointer;
+ }
+ .text3{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 700px;
+ }
+ .text3 h1{
+   font-size: 1em; 
+   margin: 10px;
+}
+.campo1 p{
+    color: var(--cor-2);
+    text-align: center;
+    font-size: 1.5em;
+}
 
-            }
-        }
-        .textp {
+}
+.textp {
     background: url('img/home2.jpg') no-repeat center center;
     background-size: cover;
-    height: 800px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,7 +133,7 @@
  .text2 img {
     display: block;
     margin: 20px auto;
-    width: 50%;
+    width: 30%;
 }
 
 .textp p {
@@ -153,16 +166,66 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 80px;
    
 }
 
 .imagens img {
     background-size: cover;
      width: 200px;
-   
-    
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+.text3 {
+    background-color: var(--cor-4);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+    padding: 20px; 
+    margin-top: 50px;
+    
+}
+
+.campo1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.campo1 h1{
+   color: var(--cor-2);
+   text-align: center;
+   font-size: 3.0em;
+   padding: 10px;
+}
+.campo1 img{
+    width: 300px;
+    padding: 15px;
+}
+.campo1 p{
+    color: var(--cor-2);
+    text-align: center;
+    font-size: 1.3em;
+    padding-bottom: 10px;
+}
+
+.campo2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;  
+}
+
+.campo2 video {
+    display: block;
+    margin: auto;
+    max-width: 700px;
+    min-width: 200px;
+    align-items: center;
+    padding-right: 80px;
+}
+
     </style>
 </head>
 
@@ -189,7 +252,7 @@
             <a href="#"> CONTATO</a>
         </div>
     </div>
-    <section id="content">
+    <section id="content" onclick="closee()" tabindex="0">
         <article>
             <div class="textp">
                 <h1>
@@ -197,10 +260,10 @@
             </div>
             
             <div class="text2">
-                <h1>Visite uma unidade para provar cada uma das nossas receitas deliciosas.</h1>
+                <h1>Visite uma unidade para provar cada uma das <br> nossas receitas deliciosas.</h1>
                 <img src="img/elemento.png" alt="">
                 <p>O nosso cardápio é recheado com um mix de sabores e experiências surpreendentes. Desde cafés
-                    especiais, preparados com os melhores grãos,bolos caseiros, pães frescos e sanduíches gourmets e
+                    especiais,<br>preparados com os melhores grãos,bolos caseiros, pães frescos e sanduíches gourmets e
                     muito mais.</p>
 
             </div>
@@ -208,12 +271,31 @@
                  <img src="img/pao-de-queijo.jfif" alt="brownie">
                  <img src="img/sanduiche3.jfif" alt="suco-verde">
                  <img src="img/sanduiché2.jpg" alt="sanduíche">
+                 <img src="img/ovos.jpg" alt="ovos">
+                 <img src="img/rap-10.jpg" alt="rap-10">
+                 <img src="img/canjica.jpg" alt="canjica">
+                 <img src="img/biscoito.jpg" alt="biscoito">
                  <img src="img/sanduíche.jfif" alt="sanduíche">
-                 <img src="img/cafe-gelado.jpg" alt="cafe-gelado">
+                 <img src="img/brownie.jpg" alt="brownie">
+                  <img src="img/panquecas2.jpg" alt="panquecas">
+                 <img src="img/torta.jpg" alt="torta">
+                 <img src="img/panquecas.jpg" alt="panquecas">
                  <img src="img/cafe.jpg" alt="cafe">
-                 <img src="img/cha.jpg" alt="">
+                 <img src="img/cafe-gelado.jpg" alt="cafe-gelado">
+                 <img src="img/chocolate-quente.jpg" alt="chocolate-quente">
+                 <img src="img/cha.jpg" alt="chá">
                  <img src="img/suco-maracuja.jpg" alt="suco-maracuja">
                  <img src="img/drink-limão.jpg" alt="drink-limão">
+            </div>
+            <div class="text3">
+                <div class="campo1">
+                    <h1>Assista um vídeo com nossas especialidades</h1>
+                   <img src="img/elemento2.png" alt="">
+                   <p>Acompanhe no vídeo as nossas delícias que podem ser <br> encontradas nas nossas unidades.</p>
+                </div>
+                <div class="campo2">
+                    <video src="img/video.mp4" controls ></video>
+                </div>
             </div>
         </article>
 
