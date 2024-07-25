@@ -31,25 +31,28 @@ body {
     height: 100vh;
     background-color: var(--cor-3);
     overflow-x: hidden;
-    overflow-y: visible;
+   
  }
  .img-logo{
     width: 90px;
     margin-right: 20px;
 }
 .header, .nagivation_header{
+    background-color: var(--cor-2);
     display: flex;
     flex-direction: row;
-    align-items: center;
-   
+    align-items: center;  
 }
 
 .header{
-    background-color: var(--cor-2);
     box-shadow: 1px 1px 4px var(--cor-7);
     justify-content: center;    
-    padding: 0 10%; 
+    padding: 0 ; 
     height: 10%;  
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+   
     
 }     
 .nagivation_header{
@@ -73,29 +76,30 @@ body {
    background-color: transparent;
    cursor: pointer;
    width: 80px;
-   
-
+   width: 40px;
+   height: 40px;
+   font-size: 24px;
 }
 
  @media screen and (max-width: 768px) and (min-width:300px) {
  .btn_icon_header {
-                display: block;
-            }
+        display: block;
+  }
 
-.nagivation_header {
-    position: absolute;
+ .nagivation_header{
+        position: absolute;
         flex-direction: column;
         background-color: white;
-        top: 0px;
-        height: 100%;
+        top: 60px;
+        height: calc(100vh - 60px);
         width: 35vw;
-        padding: 1em;
-        padding-left: 20px;
+        padding: 2em;
+        padding-left: 10px;
         animation-duration: .5s;
         margin-left: -1000vw;
-        cursor: pointer;
- }
- .text3{
+        cursor: pointer;  
+    }
+.text3{
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -115,13 +119,15 @@ body {
 .textp {
     background: url('img/home2.jpg') no-repeat center center;
     background-size: cover;
-    height: 400px;
+    height: 600px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: var(--cor-2);
     text-shadow: 2px 2px 4px var(--cor-7);
+    
 }
 
 .textp h1 {
@@ -246,9 +252,9 @@ body {
                 </span>
             </button>
             <a href="../404.html" class="active"> HOME</a>
-            <a href="../paginas/pg1.html"> NOSSA HISTÓRIA </a>
+            <a href="pg1.html"> NOSSA HISTÓRIA </a>
             <a href="pg2.html"> CARDÁPIO</a>
-            <a href="#"> TORRA</a>
+            <a href="pg3.html"> TORRA</a>
             <a href="#"> CONTATO</a>
         </div>
     </div>
@@ -302,35 +308,35 @@ body {
     </section>
          
     <script>
-        var header = document.getElementById('header')
-        var nagivation_header = document.getElementById('nagivation_header')
-        var content = document.getElementById('content')
-        var showSidebar = false
-        function clicar() {
-            showSidebar = !showSidebar
-            console.log(showSidebar)
-            if (showSidebar) {
-                nagivation_header.style.marginLeft = '-65vw'
-                nagivation_header.style.animationName = 'showSidebar'
-                content.style.filter = 'blur(2px)'
-            } else {
-                nagivation_header.style.marginLeft = '-200vw'
-                nagivation_header.style.animationName = ''
-                content.style.filter = ''
-            }
-        }
-        function closee() {
-            if (showSidebar) {
-                clicar();
+       var header = document.getElementById('header')
+var nagivation_header = document.getElementById ('nagivation_header')
+var content = document.getElementById('content')
+var showSidebar = false
+function clicar(){
+    showSidebar = !showSidebar
+    console.log(showSidebar)
+   if(showSidebar){
+    nagivation_header.style.marginLeft ='-65vw'
+    nagivation_header.style.animationName = 'showSidebar'
+    content.style.filter = 'blur(2px)'
+   }else{
+    nagivation_header.style.marginLeft='-1000vw'
+    nagivation_header.style.animationName = ''
+    content.style.filter = ''
+   }
+}   
+function closee(){
+    if(showSidebar){
+        clicar() ;
 
-            }
-        }
-        window.addEventListener('resize', function (event) {
-            if (window.innerWidth > 768 && showSidebar) {
-                clicar()
-            }
-
-        })
+    }
+}
+window.addEventListener('resize',function(event){
+    if(window.innerWidth > 768 && showSidebar){
+        clicar()
+    }
+   
+})
     </script>
 </body>
 

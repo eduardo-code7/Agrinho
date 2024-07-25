@@ -81,24 +81,26 @@
             color: black;
 
         }
-
         .img-logo{
     width: 90px;
     margin-right: 20px;
 }
 .header, .nagivation_header{
+    background-color: var(--cor-2);
     display: flex;
     flex-direction: row;
-    align-items: center;
-   
+    align-items: center;  
 }
 
-.header{   
+.header{
     box-shadow: 1px 1px 4px var(--cor-7);
-    background-color: var(--cor-2);
+    height: 3.4em;
     justify-content: center;    
     padding: 0 10%; 
     height: 10%;  
+    position: fixed;
+    width: 100%;
+    z-index: 3;
     
 }     
 .nagivation_header{
@@ -122,29 +124,28 @@
    background-color: transparent;
    cursor: pointer;
    width: 80px;
-   
-
+   width: 40px;
+   height: 40px;
+   font-size: 24px;
 }
-
-        @media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) {
             .btn_icon_header {
                 display: block;
             }
 
-            .nagivation_header {
-                position: absolute;
-                flex-direction: column;
-                top: 0px;
-                background-color: white;
-                height: 100%;
-                width: 35vw;
-                padding: 1em;
-                animation-duration: .5s;
-                margin-left: -1000vw;
-                cursor: pointer;
-
-            }
-
+.nagivation_header{
+        position: absolute;
+        flex-direction: column;
+        background-color: white;
+        top: 60px;
+        height: calc(100vh - 60px);
+        width: 35vw;
+        padding: 2em;
+        padding-left: 10px;
+        animation-duration: .5s;
+        margin-left: -1000vw;
+        cursor: pointer;    
+    }
             #cafetrad {
                 flex-direction: column;
                 font-size: 1.0em;
@@ -182,13 +183,13 @@
                 </span>
             </button>
             <a href="../404.html" class="active"> HOME</a>
-            <a href="paginas/pg1.html"> NOSSA HISTÓRIA </a>
+            <a href="pg1.html"> NOSSA HISTÓRIA </a>
             <a href="pg2.html"> CARDÁPIO</a>
-            <a href="#"> TORRA</a>
+            <a href=""> TORRA</a>
             <a href="#"> CONTATO</a>
         </div>
     </div>
-    <section>
+    <section id="content" onclick="closee()" tabindex="0">
         <div id="fundo1">
             <h1>CONHEÇA NOSSA HISTÓRIA</h1>
         </div>

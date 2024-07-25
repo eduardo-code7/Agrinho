@@ -1,10 +1,9 @@
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width:200px) {
     *{
         margin: 0px;
         padding: 0px;
     }
-    
     footer {
         flex-direction: column;
         align-items: center;
@@ -24,7 +23,7 @@
         margin-top: 20px;
     }
     #icardapio img{
-        width: 400px;
+        width: 300px;
     }
   
     .footer2 input, .footer2 textarea, .footer2 select {
@@ -37,19 +36,23 @@
         position: absolute;
         flex-direction: column;
         background-color: white;
-        top: 0px;
-        height: 100%;
+        top: 60px;
+        height: calc(100vh - 60px);
         width: 35vw;
         padding: 2em;
-        padding-left: 10px;
+        padding-left: 30px;
         animation-duration: .5s;
         margin-left: -1000vw;
         cursor: pointer;
         
     }
+    #cafe p {
+        padding: 10px;
+    }
     #cafetrad{
         flex-direction: column;
         font-size: 1.0em;
+       
         
     }
 }

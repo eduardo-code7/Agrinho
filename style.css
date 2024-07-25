@@ -29,6 +29,7 @@ body {
     margin-right: 20px;
 }
 .header, .nagivation_header{
+    background-color: var(--cor-2);
     display: flex;
     flex-direction: row;
     align-items: center;  
@@ -40,6 +41,9 @@ body {
     justify-content: center;    
     padding: 0 10%; 
     height: 10%;  
+    position: fixed;
+    width: 100%;
+    z-index: 3;
     
 }     
 .nagivation_header{
@@ -63,8 +67,9 @@ body {
    background-color: transparent;
    cursor: pointer;
    width: 80px;
-   
-
+   width: 40px;
+   height: 40px;
+   font-size: 24px;
 }
 
 #imgp {
@@ -87,7 +92,7 @@ body {
 
 #imgp h1 {
     text-align: center;
-    padding-top: 200px;
+    padding-top: 250px;
     font-size: 5em;
     text-shadow: 2px 2px 4px var(--cor-7);
 }
@@ -101,8 +106,12 @@ body {
     color: var(--cor-1);
     padding: 40px;
     padding-top: 200px;
-    font-size: 3em;
+    font-size: 4em;
     margin-bottom: -30px;   
+}
+#icardapio img{
+    max-width: 400px;
+    padding: 20px;
 }
 #icardapio p {
     text-align: center;
@@ -113,7 +122,8 @@ body {
   color: var(--cor-2);
   text-decoration: none;
   display: block;
-  width: 30%;
+  max-width: 240px;
+  min-width: 100px;
   margin: auto;
   margin-top: 20px;
   border-radius: 10px;
@@ -177,7 +187,7 @@ footer {
     padding: 20px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    height: 600px;
+    height: 380px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
