@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 768px) and (min-width:200px) {
+@media screen and (max-width:600px) {
     *{
         margin: 0px;
         padding: 0px;
@@ -9,8 +9,9 @@
         align-items: center;
     }
     #imgp{
-        width: 100%;
        background-position:  center top;
+       width: 100%;
+       margin-right: -10px;
 
     }
     #imgf{
@@ -38,7 +39,7 @@
         background-color: white;
         top: 60px;
         height: calc(100vh - 60px);
-        width: 35vw;
+        width: 40vw;
         padding: 2em;
         padding-left: 30px;
         animation-duration: .5s;
