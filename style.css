@@ -4,7 +4,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    overflow-x: auto;
 }
 
 :root {
@@ -17,7 +16,9 @@
     --cor-7: #000000;
     --fonte: 'Merriweather', serif;
 }
-
+body{
+ overflow-x: hidden;
+}
 
 .img-logo{
     width: 90px;
