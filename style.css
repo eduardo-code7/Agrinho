@@ -19,9 +19,14 @@
     --fonte: 'Merriweather', serif;
 }
 body{
-    overflow-x: hidden;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--cor-3);
+        overflow-x: hidden;
 }
-
+main{
+    margin-right: 30px;
+}
 .img-logo{
     width: 90px;
     margin-right: 20px;
