@@ -4,8 +4,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
-    
+    overflow-x: auto;
 }
 
 :root {
@@ -18,15 +17,8 @@
     --cor-7: #000000;
     --fonte: 'Merriweather', serif;
 }
-body{
-        width: 100vw;
-        height: 100vh;
-        background-color: var(--cor-3);
-        overflow-x: hidden;
-}
-main{
-    margin-right: 30px;
-}
+
+
 .img-logo{
     width: 90px;
     margin-right: 20px;
