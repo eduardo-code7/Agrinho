@@ -17,7 +17,12 @@
     --cor-7: #000000;
     --fonte: 'Merriweather', serif;
 }
-
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor-3);
+    overflow-x: hidden;   
+}
 
 .img-logo{
     width: 90px;
