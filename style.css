@@ -4,7 +4,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-   
+    
 }
 
 :root {
@@ -18,10 +18,9 @@
     --fonte: 'Merriweather', serif;
 }
 body {
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--cor-3);
-    overflow-x: hidden;   
+    background-color: var(--cor-3);  
+    overflow-x: hidden; 
+   
 }
 
 .img-logo{
@@ -37,14 +36,13 @@ body {
 
 .header{
     box-shadow: 1px 1px 4px var(--cor-7);
-    height: 3.4em;
+    height: 10%;
     justify-content: center;    
-    padding: 0 10%; 
-    width: 100%;
-    height: 10%;  
+    padding: 0 ;   
     position: fixed;
+    width: 100%;
     z-index: 3;
-  
+    
 }     
 .nagivation_header{
     gap: 3em;
@@ -67,7 +65,6 @@ body {
    background-color: transparent;
    cursor: pointer;
    width: 80px;
-   width: 40px;
    height: 40px;
    font-size: 24px;
 }
@@ -101,6 +98,7 @@ body {
 #icardapio {
     height: 700px;
     margin-top: 40px;
+    overflow-x: hidden;
 }
 #icardapio h2 {
     text-align: center;
@@ -190,6 +188,7 @@ footer {
     border-radius: 10px;
     height: 380px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
 }
 
 .footer2 {
@@ -198,6 +197,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background: rgba(0, 0, 0, 0.5);   
+    overflow-x: hidden;
 }
 
 .footer1 h1, .footer2 h3 {
@@ -251,3 +251,62 @@ footer {
     background-color: var(--cor-4);
 }
 
+@media screen and (max-width:768px) {
+   
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    #imgp{
+       background-position:  center top;
+      
+    }
+    #imgf{
+       background-position: top center;  
+    }
+
+    .footer1, .footer2 {
+        margin-right: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+    #icardapio img{
+        width: 300px;
+    }
+  
+    .footer2 input, .footer2 textarea, .footer2 select {
+        width: 100%;
+    }
+    .btn_icon_header {
+        display: block;
+    }
+  
+   .nagivation_header{
+          position: absolute;
+          flex-direction: column;
+          background-color: white;
+          top: 60px;
+          height: calc(100vh - 60px);
+          width: 60vw;
+          border-radius: 5px;
+          padding: 2em;
+          padding: auto;
+          animation-duration: .5s;
+          margin-left: -1000vw;
+          cursor: pointer;  
+      } 
+    #cafe p {
+        padding: 10px;
+    }
+    #cafetrad{
+        flex-direction: column;
+        font-size: 1.0em;
+       
+        
+    }
+}
+@keyframes showSidebar{
+    from{margin-left: -200vw;}
+        top{margin-left: -65vw;}
+    
+}
