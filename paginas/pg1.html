@@ -30,9 +30,10 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #b9b9b99c;
-            overflow-x: hidden;
         }
-
+        section{
+               overflow-x: hidden;
+                 } 
         #fundo1 {
             background: black url('img/fundo1-home.jpg') no-repeat center center/cover;
             height: 500px;
@@ -109,22 +110,25 @@
     
 }     
 .nagivation_header{
+    margin-right: -50px;
     gap: 3em;
     z-index: 2;
 }
-.nagivation_header a{
+.nagivation_header a {
     text-decoration: none;
-    color:var(--cor-1);
-    transition: .8s;
-    font-weight:bolder;
+    color: var(--cor-1);
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    font-weight: bold;
     font-size: 1.2em;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Merriweather', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 15px 15px; 
+    border-radius: 4px; 
 }
 .nagivation_header a:hover{
   color: var(--cor-5);
 }
 .btn_icon_header{
-    display: none;
+  display: none;
    border: none;
    background-color: transparent;
    cursor: pointer;
@@ -142,22 +146,27 @@
         position: absolute;
         flex-direction: column;
         background-color: white;
-        top: 60px;
-        height: calc(100vh - 60px);
-        width: 60vw;
-        border-radius: 5px;
+        top: 0;
+        height: 1000px;
+        width: 50vw;
         padding: 2em;
         padding-left:10px;
         animation-duration: .5s;
         margin-left: -1000vw;
         cursor: pointer;  
-    }      #cafetrad {
+    }   
+    .nagivation_header a:hover {
+    background-color: var(--cor-5);  
+    color: var(--cor-2); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transform: translateY(-2px); 
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+    #cafetrad {
                 flex-direction: column;
                 font-size: 1.0em;
-
             }
         }
-
         @keyframes showSidebar {
             from {
                 margin-left: -1000vw;
