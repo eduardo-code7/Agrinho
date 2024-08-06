@@ -26,9 +26,10 @@
         body {
             width: 100vw;
             height: 100vh;
-            overflow-x: hidden;
             line-height: 1.6;
-            
+        }
+        section{
+            overflow-x: hidden;
         }
 .img-logo{
     width: 90px;
@@ -51,17 +52,19 @@
     z-index: 3; 
 }     
 .nagivation_header{
+    margin-right: -50px;
     gap: 3em;
     z-index: 2;
 }
 .nagivation_header a{
     text-decoration: none;
     color:var(--cor-1);
-    transition: .8s;
+    transition: color 0.3s ease, background-color 0.3s ease; 
     font-weight:bolder;
     font-size: 1.2em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+    padding: 10px ; 
+    border-radius: 4px;
 }
 .nagivation_header a:hover{
   color: var(--cor-5);
@@ -72,7 +75,6 @@
    background-color: transparent;
    cursor: pointer;
    width: 80px;
-   width: 40px;
    height: 40px;
    font-size: 24px;
 }
@@ -195,16 +197,22 @@
                 position: absolute;
                 flex-direction: column;
                 background-color: white;
-                top: 60px;
+                top:0;
                 height: calc(100vh - 60px);
-                width: 50%;
-                padding: 2em;
-                padding-left: 30px;
+                width: 50vw;
+                padding:25px;
                 animation-duration: .5s;
                 margin-left: -1000vw;
                 cursor: pointer;
-
             }
+            .nagivation_header a:hover {
+                  background-color: var(--cor-5);  
+                 color: var(--cor-2); 
+                 margin-left: 30px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+                transform: translateY(-2px); 
+                transition: background-color 0.3s ease, color 0.3s ease,transform 0.3s ease;
+}
         }
     </style>
 </head>
