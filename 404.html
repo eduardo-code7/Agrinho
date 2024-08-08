@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café de vó</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+</head>
+
+<body>
+    <div class="header" id="header">
+        <button class="btn_icon_header" onclick="clicar()">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+        <div class="logo_header">
+            <a href="index.html"><img src="img/logo.png" alt="logo" class="img-logo"></a>
+        </div>
+        <div class="nagivation_header" id="nagivation_header">
+            <button class="btn_icon_header" onclick="clicar()">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+            <a href="Index.html" class="active"> HOME</a>
+            <a href="paginas/pg1.html"> NOSSA HISTÓRIA </a>
+            <a href="paginas/pg2.html"> CARDÁPIO</a>
+            <a href="paginas/pg3.html"> TORRA</a>
+            <a href="paginas/pg4.html"> CONTATO</a>
+        </div>
+    </div>
+
+    <section id="content" onclick="closee()" tabindex="0">
+        <div id="imgp">
+            <h1>CAFÉ DE VÓ</h1>
+            <p>A tradição do Café de Vó está em cada xícara, trazendo o aconchego e o sabor das receitas caseiras
+                que passam de geração em geração.
+            </p>
+        </div>
+
+        <article>
+            <div id="icardapio">
+                <h2>Nossa tradição</h2>
+                <img src="img/elemento.png" alt="" style="display: block; margin: auto;">
+                <p>A tradição do Café de Vó está em cada xícara, trazendo o aconchego e o sabor das receitas
+                    caseiras que passam de geração em geração.
+                    <a href="paginas/pg1.html">CONHEÇA NOSSA HISTÓRIA</a>
+                </p>
+            </div>
+
+            <div id="imgf"></div>
+
+            <div id="icardapio">
+                <h2> Nosso cardápio </h2>
+                <img src="img/elemento.png" alt="" style="display: block; margin: auto;">
+                <p>O cardápio do Café de Vó oferece uma viagem nostálgica ao passado com delícias caseiras como
+                    bolos, tortas, pães de queijo e biscoitos, sanduíches e outras receitas deliciosas.
+                    <a href="#">CONHEÇA O NOSSO CARDÁPIO</a>
+                </p>
+            </div>
+            <div id="cafe">
+
+                <h2>Alguns de nossso cafés</h2>
+                <div id="cafetrad"><img src="img/cafe trad.png" alt="">
+
+                    <p>O melhor café tradicional é feito com grãos de alta qualidade, cuidadosamente selecionados e
+                        moídos na hora para garantir o máximo frescor e aroma. Ele é preparado com precisão para
+                        destacar suas notas ricas e complexas, resultando em uma bebida encorpada e equilibrada.</p>
+                </div>
+                <div id="cafetrad" style="background-color: white;">
+                    <img src="img/cafe ext.png" alt="">
+                    <p style="color: black;">Café extraforte, é perfeito para quem busca um sabor intenso e marcante.
+                        Feito a partir de grãos selecionados e torrados até atingirem um ponto escuro.</p>
+                </div>
+                <div id="cafetrad">
+                    <img src="img/cafe gorm.png" alt="">
+                    <p> Café Gourmet, eleve seus momentos de café com a qualidade e o requinte que só nosso Café de vó
+                        gourmet. Cada xícara traz notas profundas de chocolate amargo e nozes, garantindo um sabor
+                        encorpado que vai te surpreender.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <div class="footer1">
+            <h1>CONTATO</h1>
+            <h3>Endereço:</h3>
+            <p> <strong>Centro</strong>-Rua. Juscelino Kubitscheck • Centro-Parana/PR</p>
+            <h3>FUNCIONAMENTO GERAL:</h3>
+            <p>Segunda a Sexta das 11h às 18h <br>
+                Sábados: das 11h às 17h <br>
+                Domingo: fechado</p>
+            <h3>FORMAS DE PAGAMENTO</h3>
+            <p>CARTÕES DE CRÉDITO: VISA / MASTER / AMEX / DINERS / ELO / AME DIGITAL
+                CARTÕES DE DÉBITO: VISA ELECTRON / MASTERCARD / ELO
+                TICKETS REFEIÇÃO: SODEXO / ALELO / TR / VR</p>
+        </div>
+        <div class="footer2">
+            <h3>DEIXE SUA MENSAGEM</h3>
+            <p>*Campos obrigatórios</p>
+            <form>
+                <label for="itxt1">Nome *</label>
+                <input type="text" name="nome" id="itxt1" required>
+
+                <label for="itxt2">Empresa</label>
+                <input type="text" name="assunto" id="itxt2" required>
+
+                <label for="iemail">Email *</label>
+                <input type="email" name="email" id="iemail" required>
+
+                <label for="inumber">Telefone *</label>
+                <input type="number" name="telefone" id="inumber" required>
+
+                <select name="categoria" id="res" required>
+                    <option value="" disabled selected>Selecione *
+                    </option>
+                    <option value="trabalhe">Trabalhe Conosco</option>
+                    <option value="orcamento">Orçamento</option>
+                    <option value="reserva">Reserva - Restaurante</option>
+                    <option value="reclamacoes">Reclamações/Sugestões</option>
+                    <option value="informacoes">Informações</option>
+
+                </select>
+                <label for="imsg">Mensagem *</label>
+                <input type="text" name="caixa" id="imsg">
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
